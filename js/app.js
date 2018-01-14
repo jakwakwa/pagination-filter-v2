@@ -1,3 +1,4 @@
+
 const students = document.getElementsByClassName('student-item');
 const paginationEl = document.getElementsByClassName('pagination')[0];
 // const button1 = document.getElementsByClassName('1');
