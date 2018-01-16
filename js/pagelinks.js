@@ -25,17 +25,17 @@ const appendPageLinks = (studentList) => {
     // select created links
     const buttons = document.querySelectorAll('.pagination li');
     // loop through all the link elements 
-    for(let i = 0; i < buttons.length; i++) {
+    buttons.forEach((link,index) => {
         // assign eventlisteners to each link
-        buttons[i].addEventListener('click', () => {
+        link.addEventListener('click', () => {
             // call showpage function using i as page number
-            showPage((i + 1),students);  
+            showPage((index + 1),students);
             const active = document.querySelector('.pagination li a.active');
             if ( active ) {
                 active.className = '';
             }
             // Updated to use className
-            buttons[i].firstElementChild.className = 'active';
+            link.firstElementChild.className = 'active';
         });
-    }
+    });
 };
