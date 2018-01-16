@@ -10,13 +10,13 @@ const appendPageLinks = (studentList) => {
     ul.className = 'pagination';
     // create a page link section
     // “for” every page
-    for(let i = 1; i < pageAmount; i++) {
+    for(let i = 0; i < pageAmount; i++) {
         // add a page link to the page link section
         const li = document.createElement('li');
         const link = document.createElement('a');
         link.setAttribute('href', '#')
         // add page number to link
-        link.innerHTML = i;
+        link.innerHTML = (i+1);
         // append link to list element
         li.appendChild(link);
         // append list element to unordered list
